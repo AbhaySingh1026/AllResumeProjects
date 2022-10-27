@@ -1,0 +1,18 @@
+﻿@page
+@model AccessDeniedModel
+@{
+    ViewData["Title"] = "Access denied";
+}
+
+<header>
+    <h1 class="text-danger text-center">@ViewData["Title"]</h1>
+</header>
+
+<script>
+    $(document).ready(function(){
+        swal("Hold On!", "You don't have access to this page.", "error", { closeOnClickOutside: false, })
+            .then((willDelete) => {
+                $(location).attr('href', 'https://localhost:7147/Home/Index')
+            });
+    });
+</script>

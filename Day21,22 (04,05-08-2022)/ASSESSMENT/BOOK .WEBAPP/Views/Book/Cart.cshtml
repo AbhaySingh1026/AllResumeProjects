@@ -1,0 +1,26 @@
+﻿@model Book
+
+<br /><br />
+<h1 class="text-center text-danger text-decoration-underline">Cart Page</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-2">
+        <h3 class="text-danger">Item</h3>
+        <div>
+            <h4>@Model.Name</h4>
+        </div>
+    </div>
+    <div class="col-md-1">
+        <h3 class="text-danger">Price</h3>
+        <div>
+            <h4>@Model.Cost</h4>
+        </div>
+    </div>
+    <div class="col-md-1">
+        <h3 class="text-danger">Final</h3>
+        <button class="btn btn-outline-success">Purchase</button>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+<hr />

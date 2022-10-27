@@ -1,0 +1,101 @@
+﻿@model Book
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .form-control::placeholder{
+        color: red;
+    }
+</style>
+
+<h1 class="text-center">Fill All Details To Add New</h1>
+
+<h4 class="text-center">Book</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="CreateOrUpdate" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @Html.HiddenFor(model => model.Id)
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        
+                        @{
+                            if(Model != null)
+                            {
+                                if(Model.Name == "Book with this name already exists.")
+                                {
+                                    <input type="text" class="form-control" placeholder=@Model.Name asp-for="Name" value= "@null"/>
+                                }
+                                else
+                                {
+                                    <input type="text" class="form-control" asp-for="Name"/>
+                                }
+                                    //<input asp-for="Name" class="form-control text-danger text-hidden" value=null placeholder="aaaa"/>
+                                    
+                            }
+                            else
+                            {
+                                <input asp-for="Name" class="form-control"/>
+                            }
+                        }
+                        <span asp-validation-for="Name" class="text-danger" value="sdadas"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Zoner" class="control-label"></label>
+                        <input asp-for="Zoner" class="form-control" />
+                        <span asp-validation-for="Zoner" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="ReleaseDate" class="control-label"></label>
+                        <input asp-for="ReleaseDate" class="form-control" type="date"/>
+                        <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Cost" class="control-label"></label>
+                        <input asp-for="Cost" class="form-control" />
+                        <span asp-validation-for="Cost" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+                <div class="col-md-12">
+                     <div class="form-group">
+                        <label asp-for="Image" class="control-label"></label>&nbsp;&nbsp;&nbsp;
+                        <input asp-for="Image" multiple accept="image/*" class="custom-file-input" id="customFile" />
+                        <span asp-validation-for="Image" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <br />
+
+            <div class="form-group text-center">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

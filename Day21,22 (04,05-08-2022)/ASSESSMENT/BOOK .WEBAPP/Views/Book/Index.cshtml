@@ -1,0 +1,69 @@
+﻿@model List<Book>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int count = 0;
+}
+
+<h1>All Book Details - </h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Add New Book</a>
+</p> <hr /><br />
+
+<form asp-action="Search">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-7">
+            <input type="search" name="searchString" class="form-control" placeholder="Search your book here...."/>
+        </div>
+        <div class="col-md-1">
+            <input type="submit" value="Search" class="btn btn-warning"/>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</form><br /><br />
+
+
+
+<div class="row">
+    @foreach(var item in Model)
+    {
+
+        <div class="col-md-3">
+            @if (count >= 4)
+            {
+                <br /><hr><br />
+            }
+            <img src="/@item.ImagePath" class="w-100" style="background-color:antiquewhite">
+            <br><br>
+            <div class="text-dark">
+                BookId: @item.Id
+            </div>
+            <div class="text-dark">
+                BookName: @item.Name
+            </div>
+            <div class="text-dark">
+                BookZoner: @item.Zoner
+            </div>
+            <div class="text-dark">
+                ReleasedOn: @String.Format("{0:dd/MM/yyyy}",item.ReleaseDate)
+            </div>
+            <div class="text-dark">
+                Cost: @item.Cost
+            </div><br>
+            @{
+                item.ImagePath = "/" + item.ImagePath;
+            }
+            <div>
+                <a href="@Url.Action("Details", new{item.Id, item.Name, item.Zoner, item.ReleaseDate, item.Cost, item.ImagePath})" class="btn btn-primary">Details</a>
+                <a href="@Url.Action("Edit", new{item.Id, item.Name, item.Zoner, item.ReleaseDate, item.Cost})" class="btn btn-warning">Edit</a>
+                <a asp-action="Delete" asp-route-bookId="@item.Id" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+
+        count++;
+        
+    }
+</div>

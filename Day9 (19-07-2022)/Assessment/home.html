@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment 2</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .dropbtn {
+          background-color: white;
+          color: black;
+          border: none;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .dropdown-content a:hover {background-color: #ddd;}
+        
+        .dropdown:hover .dropdown-content {display: block;}
+        
+        .dropdown:hover .dropbtn {background-color:white;}
+        </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-light">
+        <div class="container-fluid">
+            <img src="data:image/webp;base64,UklGRqYEAABXRUJQVlA4TJkEAAAvysALEJ+hqJEkpZdMrH+R+zoGCwbStsmm4v6FforaNpLcEpj/8md5so1tKxGZW+YaM2R0Qa8URAWbWQEL2QBFYXQIgNyKqlD1F4HwiEB44IYXzl744Myn/3Z/1U2XDIldbUqbMOkzApPh1G46ZF+CgibJBbP/rqQJiIhwWbZtt21z04AHiEBUaUiCaAbu3X6Z/+hIFGJ54Tui/xMAMZKtqtIJ5nIA0Qse8o/uozx3A4jo/wQgX16Om46IqNscLxINL8+WMu1ZNpq40lRQX4kWO2oqrI/NFSwtaEVbeU2L6qGlPC3u28lThb6VPFU5tFHQdWjRRJbiW1fQxMi2kKO4QUmpYuTaR+iYEkUwJGjxfXUy7DPad3qKDyi8j5H7vlzK+yh+RurYHqXlKqZlgZByzmf/RMjpU8xn/96JokYWwxgjn3X/rvkdf2dNyt+JTZJq/5qNqIAF+5jNuH3hVP6Mkvwz1BUA1ta/JSnqAXkWE3GWk/EycwkATIRk2jtXhSolAFny3103Rqv3t3xkC6Cn9cTSCYAgCgA8aQAhNiQ9MTO3MwA9ty+AHZ9RniAW+1QfGQBYIglIIgtgIHIA9kQBQBdxKXfMzB+GqZUvzD9yzKYfWke6a3Egol0IloiO4loT6Us4E5G9DgeKrlOemPnrFuswIxmeddL2kQybrmavyCdGPjP2WReptkv5YOZHvEyXxjsOLnlwSSo2uJSRNXUgXRrvuIWq4VlqUkszuiRdYSJakdSyAaDk9bid9KMhIuUHRUSr0KdRCjPzXQa1TrN6a9psA7VOOxCbSn9w1IhQxCHpIizW1iexXh0ht2rPtgGAGAYBIPhRAhj9CEAOq3LI9VZyzE1qM6m5S5Kvkt9S8wPwVnLMTWpbYLmpxkU1ALgLAOrEtDQbvGDsrTxzWHBdTTcAiJIWxYBQJYUFkCUHgG4AECXtAZBcl00SxsMBuGNu7RhuzJPCn7vLgZE0PmgGAJR0boCRNP4COHVMOMkOmOICxz3khSlhVdsq5Z2ZnzLMNfoDx1RSfmeu0X+DrPCG4ipp4AJ3xjrjz6/ZHxPxb1ZmrFNemfnz/8o6UCW5u75RJbm7Ntki6PxB3NBn/KXZm4mj2THDpdx+MvNnn/VKdEkEwAfNBko6X3VJBMA9pSyg/MYUV8c95IUpwdc2pOCRpyWS6ZIISjIA+YGKAaFK6q8oyQDkPUl91hXfwH1hdxnuRVKArE0m4WWyJrqkEuzUE93uTZLjVZdUgp3ag1ptcjW8otKstDDUPOmtADB1GWS+prQOuKbtQW2atvAOrmnb1FtLZHTFd0gqHYjeIoZYr46QWjUAp7p8Du5e2qwEAFaGEh9498EDNlgZStwEK5LkxAawSpJ3TGguSYcBgFRJP8Ps72JKZgHoJImlkYblAHQyYLORhl+SAbsDaZiLQCCx7JPSizhUPfvvh8dCzfVL2Dklmgduzi4gad6hfWBm6CBKBTtn0EJBzSyuRG2H+/H/eX8FX4dHI/saPJrZL+fR0INaRg1o6mCWMAKt7VQp5dDgolcllJNoc3kyOcZLNLz0bm0mZu28RFMDAA==" alt="website logo">&nbsp;
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon" style="background-color:black"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="#" class="nav-item nav-link active" style="color:black;">About Us</a>
+                    <a href="#" class="nav-item nav-link" style="color:black;">Privacy</a>
+                    <a href="/faq.html" class="nav-item nav-link" style="color:black;">FAQ</a>
+                    <a href="#" class="nav-item nav-link" style="color:black;">Carrers</a>
+                </div>
+                <div class="navbar-nav ms-auto">
+                    <a href="#" class="nav-item nav-link" style="color:black;">My Whislist</a>
+                    <a href="#" class="nav-item nav-link" style="color:black;">Track Your Order</a>
+                    <a href="https://www.facebook.com/login.php" class="nav-item nav-link"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="facebook logo" style="height:20px;"></a>
+                    <a href="https://www.instagram.com/" class="nav-item nav-link"><img src="https://cdn-icons.flaticon.com/png/128/3670/premium/3670125.png?token=exp=1658207076~hmac=bfafbdd39ecb82bb7a4deca3235bc897" alt="instagram logo" style="height:20px;"></a>
+                    <a href="https://twitter.com/i/flow/login" class="nav-item nav-link"><img src="https://cdn-icons.flaticon.com/png/128/2504/premium/2504839.png?token=exp=1658207035~hmac=b936d95052d993e66196a7f463672ee7" alt="twitter logo" style="height:20px;"></a>
+                    <a href="https://www.linkedin.com/feed/" class="nav-item nav-link"><img src="https://cdn-icons-png.flaticon.com/128/145/145807.png" alt="linkedin logo" style="height:20px;"></a>
+                    <a href="https://www.youtube.com/c/LoveBabbar1" class="nav-item nav-link"><img src="https://cdn-icons.flaticon.com/png/128/3670/premium/3670147.png?token=exp=1658207133~hmac=e794eb14118ada0860f0e6f9bcf7710c" alt="youtube logo" style="height:20px;"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white">
+        <div class="container-md">
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav" >
+                    <a href="#" class="nav-item nav-link active fw-bold" style="color:black;">Home&emsp;&emsp;</a>
+                    <a href="#" class="nav-item nav-link fw-bold" style="color:black;">Men&emsp;&emsp;</a>
+                    <a href="#" class="nav-item nav-link fw-bold" style="color:black;">Women&emsp;&emsp;</a>
+                    <a href="#" class="nav-item nav-link fw-bold" style="color:black;">Baby Collection&emsp;&emsp;</a>
+                    <div class="dropdown">
+                        <button class="dropbtn fw-bold" style="padding-top: 9px;">Dropdown</button>
+                        <div class="dropdown-content">
+                          <a href="/signin.html">Login</a>
+                          <a href="/cart.html">Cart</a>
+                          <a href="#">Product Details</a>
+                          <a href="#">Checkout</a>
+                        </div>
+                    </div>&emsp;&emsp;
+                    <a href="#" class="nav-item nav-link fw-bold" style="color:black;">Blog&emsp;&emsp;</a>
+                    <a href="/contact.html" class="nav-item nav-link fw-bold" style="color:black;">Contact&emsp;&emsp;</a>
+                </div>
+                <div class="navbar-nav ms-auto">
+                    <a href="#" class="nav-item nav-link"><img src="https://cdn-icons-png.flaticon.com/128/482/482631.png" alt="search logo" style="height:30px;"></a>
+                    <a href="/signin.html" class="nav-item nav-link"><img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt="profile logo" style="height:30px;"></a>
+                    <a href="/cart.html" class="nav-item nav-link"><img src="https://cdn-icons-png.flaticon.com/128/833/833314.png" alt="cart logo" style="height:30px;"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <marquee direction="right" scrollamount = "15" bgcolor="black">
+            <p style="color:white;padding: 5px; margin: 0px;">Sale Up To 50% Biggest Discounts. Hurry! Limited Perriod Offer Shop Now.</p>
+        </marquee>
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Carousel indicators -->
+            <ol class="carousel-indicators">
+                <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="4"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="5"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="6"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="7"></li>
+            </ol>
+            
+            <!-- Wrapper for carousel items -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/img7.jpg" class="d-block w-100" style="max-height: 900px;" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img6.jpg" class="d-block w-100" style="max-height: 900px;" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img5.jpg" class="d-block w-100" style="max-height: 900px;" alt="Slide 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img3.jpg" class="d-block w-100" style="max-height: 900px;" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img4.jpg" class="d-block w-100" style="max-height: 900px;" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img8.jpg" class="d-block w-100" style="max-height: 900px;" alt="Slide 3">
+                </div><div class="carousel-item">
+                    <img src="/img1.jpg" class="d-block w-100" style="max-height: 900px;" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img2.jpg" class="d-block w-100" style="max-height: 900px;" alt="Slide 2">
+                </div>
+            </div>
+    
+            <!-- Carousel controls -->
+            <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4"><img class="img-thumbnail" src="https://preview.colorlib.com/theme/capitalshop/assets/img/gallery/xitems1.jpg.pagespeed.ic.oEs2Is3V_r.webp" alt="mens fashion"><button class="btn btn-info" style="margin-left: 150px"><i>Mens Fashion</i></button></div>
+            <!-- <div class="col-lg-4"><img class="img-thumbnail" src="https://preview.colorlib.com/theme/capitalshop/assets/img/gallery/xitems1.jpg.pagespeed.ic.oEs2Is3V_r.webp" alt="mens fashion"><p class="-caption">hello</p></div> -->
+            <div class="col-lg-4"><img class="img-thumbnail" src="https://preview.colorlib.com/theme/capitalshop/assets/img/gallery/xitems2.jpg.pagespeed.ic.rorSvQkHIK.webp" alt="womens fasion"><button class="btn btn-info" style="margin-left: 140px"><i>Womens Fashion</i></button></div>
+            <div class="col-lg-4"><img class="img-thumbnail" src="https://preview.colorlib.com/theme/capitalshop/assets/img/gallery/xitems3.jpg.pagespeed.ic.oIlAW2CB1j.webp" alt="baby fashion"><button class="btn btn-info" style="margin-left: 160px"><i>Baby Fashion</i></button></div>
+        </div>
+
+        <br><br><br><P class="h1">Trending This Week</P><hr>
+
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Carousel indicators -->
+            <ol class="carousel-indicators">
+                <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+            </ol>
+            
+            <!-- Wrapper for carousel items -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="/img7.jpg" class="img-thumbnail" alt="Slide 1">
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="/img6.jpg" class="img-thumbnail" alt="Slide 2">
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="/img5.jpg" class="img-thumbnail" alt="Slide 3">
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="/img3.jpg" class="img-thumbnail" alt="Slide 1">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="/img1.jpg" class="img-thumbnail" alt="Slide 1">
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="/img2.jpg" class="img-thumbnail" alt="Slide 2">
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="/img4.jpg" class="img-thumbnail" alt="Slide 3">
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="/img8.jpg" class="img-thumbnail" alt="Slide 1">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    
+            <!-- Carousel controls -->
+            <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="container-fluid" style="background-color:antiquewhite;margin-top:80px;">
+        <p class="h1" style="text-align: center;padding-top: 5%;">Customer Testimonial</p>
+        <p class="h3" style="text-align: center;margin-left: 25%;margin-right: 25%;padding-bottom: 5%;padding-top: 2%;"><i>No matter how compelling your copy, how well-edited your photos, or how glamourous your videos might be, all other marketing pales into insignificance compared to testimonials and reviews.</i></p>
+    </div>
+
+    <div class="container" style="background-color:lavender;margin-top: 80px;margin-bottom: 50px;">
+        <p class="h1" style="text-align: center;padding-top: 5%;padding-bottom: 3%;">Latest News</p>
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Cricket</h2>
+                <img src="cricket.jpeg" class="img-thumbnail">
+                <p style="padding-top: 5px;">Talks and discussions around Virat Kohli's form do not seem to stop and criticism to support both come in for the former India skipper. With the next T20 World Cup all set to be in just a few months from now, the form of the star player remains a huge concern.</p>
+                <p><a href="https://www.msn.com/en-in/sports/cricket/if-i-get-20-minutes-with-virat-kohli-sunil-gavaskar-after-batter-s-poor-form-against-england/ar-AAZIp5e?cvid=1f8a59eee64f40f2eb87a5aa2b1d4a48&ocid=winp2sv1plus" target="_blank" class="btn btn-info">Learn More &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Military</h2>
+                <img src="military.jpeg" class="img-thumbnail">
+                <p style="padding-top: 5px;">China's air force is often considered among the best in the world thanks to its indigenous fleet of fighter jets made by the Chengdu Aircraft Industry Group (CAIG). China is amg a handful of nations to have 100 percent home-made fleet of fighter jets and also.</p>
+                <p><a href="https://www.msn.com/en-in/money/topstories/china-s-rafale-rival-chengdu-j-10d-advanced-fighter-jet-spied-social-media-says-fake/ar-AAZGAIj?cvid=2bd7ec2fd2be4456bca60ef048763d1f&ocid=winp2sv1plus" target="_blank" class="btn btn-info">Learn More &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Space</h2>
+                <img src="space.webp" class="img-thumbnail">
+                <p style="padding-top: 5px;">Elon Musk is an entrepreneur who is best known in a space circles for launching SpaceX(opens in new tab), a private aerospace design and dadad manufacturing company. His company became the a first private one to ship cargo to the dada International Space Station(opens in new.</p>
+                <p><a href="https://www.space.com/18849-elon-musk.html" target="_blank" class="btn btn-info">Learn More &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="background-color: black;">
+        <footer style="background-color: rgb(32, 28, 28);">
+            <div class="footer-wrapper gray-bg">
+                <div class="footer-area footer-padding">
+                    <section class="subscribe-area">
+                        <div class="container" style="padding-top: 50px;">
+                            <div class="row justify-content-between subscribe-padding">
+                                <div class="col-xxl-3 col-xl-3 col-lg-4">
+                                    <div class="subscribe-caption">
+                                        <h3 style="color: white;">Subscribe Newsletter</h3>
+                                        <p style="color: white;">Subscribe newsletter to get 5% on all products.</p>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-9">
+                                    <div class="subscribe-caption">
+                                        <form action="#">
+                                            <input type="email" placeholder="Enter your email">
+                                            <button class="btn btn-danger">Subscribe</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-2 col-xl-2 col-lg-4">
+    
+                                    <div class="footer-social">
+                                        <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-youtube"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr style="color: white;">
+                        </div>
+                    </section>
+                    
+    
+                    <div class="container">
+                        <div class="row justify-content-between">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-8">
+                                <div class="single-footer-caption mb-50">
+                                    <div class="single-footer-caption mb-20">
+    
+                                        <div class="footer-logo mb-35">
+                                            <a href="main.html"><img
+                                                    src="data:image/webp;base64,UklGRoIEAABXRUJQVlA4THUEAAAvysALEJ+hoJHUaMAG/nXSvxbmn0AQIm74v5PaSLYSiH6G9N8TIRWQubuQDVAUZncA9X9MDEx0DHQ0dFQUZER4aKgymQqpLwQQQgAMFPi/wCDnAfB2QZqAiAiXZdt22zb3ufduIDQFSbAqA0jAQ+Y/OhKFWFn4juj/BECsbRusdK94EeHy+m8XiZ+ZAiL6PwHID4v18cTMfDquFwENH5aGM80yNJr4dVzQ/YoWWzsu7NbNJQ3PaERbKcezur6lFM+u2klxhaqVFFfZt5F0dTjRRIbjB13Qxti0kOa4RcngY6zbR7iYF0XQJzjx/2pS3+fy72w43qPwLsb6/2Vk3ifqM8HFdigdzjEXCvSSc77bJ3oun1K+2/dWHLWhGLoYq6zna86P+jsPZP5ODSQZ29dMxEvMuImZjLdbStXPRNI+I54dUAztW4GjCghLMRLLMOoWEwsJwEY4pF1TVYhkAZBJ+915YPR4fEtFDgA2PIwMrwAIZglAsQMgY33SPRFRuDvQcvgC1PAZ5glq8k9tIj0AwxyAwGwA9MwawI5ZAjhFdMorEdGVY+rpC/OPXLPph4bI6UdsmXkvpWHmtfhxzG4hl8xsfuSWo0PKPRFdvmHdZ5L6syb5Pkl90xn8lfTEpWeuNjtFqj2lXBHRI16Wk+NRByOtG0kmH4zMyJwaUE6OR90ixv6sBDKUmYwkzz6hPJEM2QFw8tAdRpvOMrNXvWfms9ykcQoR0WuGuC6zeHAafIO4LjtQA1N7cMWKnqih8BS8xtAmNZ4NPYfozw4SgOh7AUCqLgDoVAcg9OdyyLWQcs2BDDMymJGkrYodZLALsJByzYEMW+A5MNZFdAA4EgDxxjQFHyxhbCE905hxqKY5AFSSi+RAjyT7AsikAUBzAKgk9wAoxtMnBeNlAMww93ANB+aF/c+95sAluR4EBwCRvDfAJbl+Ady8JppkA5x1gesY8sJZcK7tnHJNRPcZbhztgWFKMr9z42i/QWZ/I2pVOGiBI2PI+P6cfB+JP5MhY0h5IKKLl5U3IJI0M34jkjQzbvJF5/2DumGT8Zcn/400T3YZOuXtgogu2qxFoZEUAD0IPojk/aqRFADtSWkB5jfOurqOIS+cBaq2PgWPNE5VKicpiKQDyA+YHOiRZHslkg4g7ylss8b6BmYLP9JwLAo7Qm0hCbejtdBIpu43n/AwCyQNrxrJ1P3mHsTokzPglVhmKfQh5kkLCYCtyyLzISU0wDgND2LgNPR3ME7DphZCkaqxvkNhakC1UDHUeDb0EqIDWNWlcvB6G2apA/A0pPrAmg3WscHTkOomeCJJEzZAkSStYSI3krwcAIJP+pCTX8V8yALQJAlLlxzLAWhSx2aXHL+UOnZ3yTGngC5huUlKL6JR9ey/Hx4LP7WZw0x50TzQU2aGwNMa7QM7wVtRSpopixaSfmJ2L2q7zK7/z9orqDoUGlnVoNDMaj6Fhu79PL5HU0s7hxVobe1LeY0GFxtfwuuANg8rm2NVQMMHpQc7soNWAU0NAA=="
+                                                    alt="" data-pagespeed-url-hash="1864434882"
+                                                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                                <div class="single-footer-caption mb-50">
+                                    <div class="footer-tittle">
+                                        <h4 style="color:red">Shop Men</h4>
+                                        <ul style="list-style-type: none;">
+                                            <li><a href="#">Clothing Fashion</a></li>
+                                            <li><a href="#">Winter</a></li>
+                                            <li><a href="#">Summer</a></li>
+                                            <li><a href="#">Formal</a></li>
+                                            <li><a href="#">Casual</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                                <div class="single-footer-caption mb-50">
+                                    <div class="footer-tittle">
+                                        <h4 style="color:red">Shop Women</h4>
+                                        <ul style="list-style-type: none;">
+                                            <li><a href="#">Clothing Fashion</a></li>
+                                            <li><a href="#">Winter</a></li>
+                                            <li><a href="#">Summer</a></li>
+                                            <li><a href="#">Formal</a></li>
+                                            <li><a href="#">Casual</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                                <div class="single-footer-caption mb-50">
+                                    <div class="footer-tittle">
+                                        <h4 style="color:red">Quick Links</h4>
+                                        <ul style="list-style-type: none;">
+                                            <li><a href="#">Track Your Order</a></li>
+                                            <li><a href="#">Support</a></li>
+                                            <li><a href="#">FAQ</a></li>
+                                            <li><a href="#">Carrier</a></li>
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="/contact.html">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="color: white;">
+                    </div>
+                </div>
+    
+                <div class="footer-bottom-area">
+                    <div class="container">
+                        <div class="footer-border">
+                            <div class="row">
+                                <div class="col-xl-12 ">
+                                    <div class="footer-copy-right text-center">
+                                        <p style="color: white
+            ;">Copyright &copy;
+                                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <i style="color: red;">Abhay</i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

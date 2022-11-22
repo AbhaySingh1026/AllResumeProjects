@@ -1,6 +1,0 @@
-﻿E:\KelltonTech\.NET training kellton\Real Training Started\TrainingByRanjeetSir\FINAL ASSESMENT\AIRLINE .EF\AirlineDbContext.cs
-E:\KelltonTech\.NET training kellton\Real Training Started\TrainingByRanjeetSir\FINAL ASSESMENT\AIRLINE .EF\ApiModels\AirlineApiModel.cs
-E:\KelltonTech\.NET training kellton\Real Training Started\TrainingByRanjeetSir\FINAL ASSESMENT\AIRLINE .EF\Migrations\20220825031641_initial.cs
-E:\KelltonTech\.NET training kellton\Real Training Started\TrainingByRanjeetSir\FINAL ASSESMENT\AIRLINE .EF\Migrations\20220825031641_initial.Designer.cs
-E:\KelltonTech\.NET training kellton\Real Training Started\TrainingByRanjeetSir\FINAL ASSESMENT\AIRLINE .EF\Migrations\AirlineDbContextModelSnapshot.cs
-E:\KelltonTech\.NET training kellton\Real Training Started\TrainingByRanjeetSir\FINAL ASSESMENT\AIRLINE .EF\Properties\launchSettings.json

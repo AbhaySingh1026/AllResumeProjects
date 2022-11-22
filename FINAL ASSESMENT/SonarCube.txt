@@ -1,9 +1,0 @@
-Generated Id = sqp_7ee232360762a011e7ddd015785575cdd86e8250
-
-Commands - 
-
-dotnet sonarscanner begin /k:"FinalAssessmentForDotnetTraining" /d:sonar.host.url="http://localhost:9000"  /d:sonar.login="sqp_7ee232360762a011e7ddd015785575cdd86e8250"
-
-dotnet build
-
-dotnet sonarscanner end /d:sonar.login="sqp_7ee232360762a011e7ddd015785575cdd86e8250"

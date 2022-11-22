@@ -1,4 +1,0 @@
-ABHAY AIRLINES WEB APP - 
-https://abhayairlines.azurewebsites.net/
-ABHAY AIRLINES WEB API - 
-https://abhayairlinesapi.azurewebsites.net/api/Airlines/ShowAllAirlines

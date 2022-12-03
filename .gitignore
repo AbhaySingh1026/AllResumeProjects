@@ -1,2 +1,6 @@
 *.json
 *.html
+obj/
+bin/
+Properties/
+Migrations/

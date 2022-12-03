@@ -1,0 +1,16 @@
+﻿@model IEnumerable<AIRLINE_.WEBAPP.Models.Airline>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>All Airline Details - </h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="CreateNewAirline">Add New Airline</a>
+</p>
+<hr class="makebolder" />
+<br />
+
+@await Html.PartialAsync("/Views/Partial Views/_ListOfAirlines.cshtml")

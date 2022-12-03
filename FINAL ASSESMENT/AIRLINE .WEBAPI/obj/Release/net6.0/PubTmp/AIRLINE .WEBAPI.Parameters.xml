@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="IIS Web Application Name" description="" value="AbhayAirlinesAPI" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^E:\\KelltonTech\\\.NET\ training\ kellton\\Real\ Training\ Started\\TrainingByRanjeetSir\\FINAL\ ASSESMENT\\AIRLINE\ \.WEBAPI\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
-  </parameter>
-  <parameter name="AIRLINE_.EF.AirlineDbContext" description="" value="Server=tcp:abhayserver.database.windows.net,1433;Initial Catalog=AbhayAirlinesDb;Persist Security Info=False;User ID=abhaysingh;Password=9125099509@Go;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="dbfullsql">
-    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^E:\\KelltonTech\\\.NET\ training\ kellton\\Real\ Training\ Started\\TrainingByRanjeetSir\\FINAL\ ASSESMENT\\AIRLINE\ \.WEBAPI\\obj\\Release\\net6\.0\\PubTmp\\EFSQLScripts\\AIRLINE_\.EF\.AirlineDbContext\.sql$" />
-  </parameter>
-</parameters>

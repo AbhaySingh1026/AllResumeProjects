@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAPaMmyjouikaRxQ09kbZn2gAAAAACAAAAAAAQZgAAAAEAACAAAABdG2+wI9ihX0ZX/XKIbo3lRmvCsm0GyLWGF53Gsm2plAAAAAAOgAAAAAIAACAAAAA+zLECApTPcv1AUp/oDlF7Hr5zD1avACN2POD442Ek24AAAAAUoo3pYq1v+gAPrZ/324APswJrVqkSxk+FFgp4bJbJI3JyvSoaoUfcUTn+Glzghts+VKsPIGCxuBwrtUvEOGZ5nVz3l+ORmryUIu2zqO5Gy2Y7h2TKrakb0drU4iSWuXN2zTr+NNxaddDRGwTIdtK6IeNKd28he4zfppvZzFC0lUAAAABEEXcXthr+92WGN7U3Q3XgJSet7/lvZP+JS2j9TClX3odTjTSSwdTLjUDFIMvIa0xQc+0pfvPd+TIev/l5JJYL</EncryptedPassword>
+    <History>True|2022-12-03T05:11:09.7119231Z;True|2022-11-22T14:00:45.9530499+05:30;True|2022-11-22T12:47:53.1441723+05:30;True|2022-11-22T09:29:42.3538760+05:30;True|2022-11-22T09:25:12.4257574+05:30;True|2022-11-22T09:21:24.0517315+05:30;True|2022-11-22T08:45:41.7249671+05:30;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="AIRLINE_.WEBAPP.Areas.Identity.Data.AirlineDbContext">
+      <Value>Server=tcp:abhayserver.database.windows.net,1433%3bInitial Catalog=AbhayAirlinesDb%3bPersist Security Info=False%3bUser ID=abhaysingh%3bPassword=9125099509%40Go%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAPaMmyjouikaRxQ09kbZn2gAAAAACAAAAAAAQZgAAAAEAACAAAACnL7o5mEDsFCorLZ4XYQGHNqnB5/n5B9m1ljpj42i7aQAAAAAOgAAAAAIAACAAAABFoArSPXM+GTiStLA4wV5SNUzDAfkZBGD+I6VIaGtyjoAAAAABEzLyWwIZ8+RdTzWkxx3T1P6Stp0E+KRRRhuckMAZPGtr0nZ/ezM1lWQuG2MhlGATUtnxTKstiAixtGaE9wbduGXcI2ZAR/2AGsD2TxDhmW8LMhbi7TfavEyC5SdqngJi4maa55ZgUnc38DzBoKo2Pzb2R0Fn+BJKpev551XEE0AAAADRc29y0lgfNOaDNMyCIyggI/iRWapM4Z277xiQ/D24YQFdY1X0FOBDw8DijjuLCkODlvEKqx5WnFopV5KKvPZ+</EncryptedPassword>
+    <History>True|2022-11-20T06:56:38.3424029Z;True|2022-11-19T18:46:49.9968838+05:30;True|2022-11-19T18:14:33.6256475+05:30;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="AirlineDbContextConnection">
+      <Value>Server=tcp:abhayserver.database.windows.net,1433%3bInitial Catalog=AbhayAirlinesDb%3bPersist Security Info=False%3bUser ID=abhaysingh%3bPassword=9125099509%40Go%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="AIRLINE_.WEBAPP.Areas.Identity.Data.AirlineDbContext">
+      <Value>Server=tcp:abhayserver.database.windows.net,1433%3bInitial Catalog=AbhayAirlinesDb%3bPersist Security Info=False%3bUser ID=abhaysingh%3bPassword=9125099509%40Go%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

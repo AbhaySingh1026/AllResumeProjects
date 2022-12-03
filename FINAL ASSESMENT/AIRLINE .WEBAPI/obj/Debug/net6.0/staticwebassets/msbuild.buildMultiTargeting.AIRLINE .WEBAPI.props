@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AIRLINE .WEBAPI.props" />
+</Project>

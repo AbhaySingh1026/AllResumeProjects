@@ -1,0 +1,149 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <h2 class="text-center">Create a new account</h2>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-floating">
+                <input asp-for="Input.PanNumber" class="form-control" aria-required="true" />
+                <label asp-for="Input.PanNumber"></label>
+                <span id="validationForPan" asp-validation-for="Input.PanNumber" class="text-danger"></span>
+            </div>
+
+            <div id="abc" class="form-floating">
+                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+                <label asp-for="Input.Email"></label>
+                <span id="validationForEmail" asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
+                <label asp-for="Input.Password"></label>
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
+                <label asp-for="Input.ConfirmPassword"></label>
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <br />
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+@*Not part of project just trying to change number written in text not in input box while clicking on 
+button without refreshing page for comparing it to blazor, but blazor won because in that variables declared in the code section
+are interlinked to upper rendering html section so if u declare var their & change value their then the value of that var will
+change in upper html section also where ever that var have been used without rendering page. - *@
+
+@*<div class="row">
+    <br /><div>
+        @{
+            int countPlease = 0;
+        }
+        <p>This <button id="fdjlas" value="@countPlease">button</button> has been clicked <b id="fjhasdfljk">@countPlease</b> times.</p>
+    </div>
+</div>*@
+
+
+
+
+
+<script>
+
+    $(document).ready(function (){
+
+        $("#Input_Email").blur(function(){
+            var emailValue = $("#Input_Email").val();
+
+            $.ajax({
+                type: "Post",
+                url: appBaseURL + "/home/CheckEmailAvailability",
+                data: { recievedEmail: emailValue },
+                dataType: "json",
+                success: function (response) {
+                    
+                    if(response == 1){
+                        $("#registerSubmit").prop('disabled', false);
+                    } else if (response == 0) {
+                        $("#validationForEmail").html('This email is already registered, Please try again with different email.');
+                        $("#registerSubmit").prop('disabled', true);
+                    } else if (response = "Input can't be null"){
+                        $("#registerSubmit").prop('disabled', false);
+                    }
+
+                },
+                failure: function (response) {                
+                    console.log(response.responseText);
+                    console.log("Failure");
+                },
+                error: function (response) {               
+                    console.log(response);
+                    console.log("Error");
+                }
+            });
+
+        });
+
+        $("#Input_PanNumber").blur(function () {
+            
+            var panNumber = $("#Input_PanNumber").val();
+
+            $.ajax({
+                type: "Post",
+                url: appBaseURL + "/home/CheckPanAvailability",
+                data: { recievedPanNumber: panNumber },
+                dataType: "json",
+                success: function (response) {
+
+                    if (response == 1) {
+                        $("#registerSubmit").prop('disabled', false);
+                    } else if (response == 0) {
+                        $("#validationForPan").html('This PAN is already registered, Please try again with different PAN card.');
+                        $("#registerSubmit").prop('disabled', true);
+                    } else if (response = "Input can't be null") {
+                        $("#registerSubmit").prop('disabled', false);
+                    }
+
+                },
+                failure: function (response) {
+                    console.log(response.responseText);
+                    console.log("Failure");
+                },
+                error: function (response) {
+                    console.log(response);
+                    console.log("Error");
+                }
+            });
+
+        });
+
+        @*Not part of project just trying to change number written in text not in input box while clicking on button without refreshing page - *@
+
+        //$("#fdjlas").click(function () {
+        //    var x = $("#fdjlas").val();
+        //    x = parseInt(x);
+        //    x += 1;
+        //    $("#fdjlas").val(x);
+        //    $("#fjhasdfljk").text(x);
+        //});
+
+    });
+
+</script>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

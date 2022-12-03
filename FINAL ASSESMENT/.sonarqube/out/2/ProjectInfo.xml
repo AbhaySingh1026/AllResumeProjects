@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>AIRLINE .WEBAPI</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>df6a7e4b-b7ae-4728-a1a9-a7b8952d5b59</ProjectGuid>
+  <FullPath>E:\KelltonTech\.NET training kellton\Real Training Started\TrainingByRanjeetSir\FINAL ASSESMENT\AIRLINE .WEBAPI\AIRLINE .WEBAPI.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="E:\KelltonTech\.NET training kellton\Real Training Started\TrainingByRanjeetSir\FINAL ASSESMENT\.sonarqube\conf\2\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">E:\KelltonTech\.NET training kellton\Real Training Started\TrainingByRanjeetSir\FINAL ASSESMENT\.sonarqube\out\2\Issues.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">E:\KelltonTech\.NET training kellton\Real Training Started\TrainingByRanjeetSir\FINAL ASSESMENT\.sonarqube\out\2</Property>
+  </AnalysisSettings>
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+  <TargetFramework>net6.0</TargetFramework>
+</ProjectInfo>

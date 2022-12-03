@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="E:\KelltonTech\.NET training kellton\Real Training Started\TrainingByRanjeetSir\FINAL ASSESMENT\AIRLINE .WEBAPP\obj\Release\net6.0\PubTmp\Out\" />
+  <dbfullsql path="E:\KelltonTech\.NET training kellton\Real Training Started\TrainingByRanjeetSir\FINAL ASSESMENT\AIRLINE .WEBAPP\obj\Release\net6.0\PubTmp\EFSQLScripts\AIRLINE_.WEBAPP.Areas.Identity.Data.AirlineDbContext.sql" />
+</sitemanifest>

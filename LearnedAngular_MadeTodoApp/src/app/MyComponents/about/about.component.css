@@ -1,0 +1,12 @@
+.makeBold{
+    font-weight: bold;
+}
+
+p{
+    text-align: justify;
+}
+
+.greeting{
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+}

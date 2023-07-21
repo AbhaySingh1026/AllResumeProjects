@@ -1,0 +1,17 @@
+nav{
+    background-color: beige;
+    position: sticky;
+    top: 0px;
+}
+
+.my-custom-search {
+    width: 100%; /* You can adjust this value to control the width of the search bar */
+    max-width: 100%; /* You can set a maximum width if needed */
+}
+
+@media (min-width: 992px) {   /* For screen size lg and above apply this css*/
+    .my-custom-search {
+        width: 100%; /* You can adjust this value to control the width of the search bar */
+        max-width: 300px; /* You can set a maximum width if needed */
+    }
+}

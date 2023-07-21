@@ -1,0 +1,12 @@
+.strike{
+    text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+    border-width: 2px;
+    border-color: blue;
+}
+
+.justify{
+    text-align: justify;
+}
